@@ -250,10 +250,7 @@ jobs:
       points: ${{ steps.autograding.outputs.points}}
     env:
       API_URL: ${{ needs.initialize.outputs.api_url }}
-<<<<<<< HEAD
-=======
       TOKEN: ${{ needs.initialize.outputs.token }}
->>>>>>> template/main
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
