@@ -2,11 +2,7 @@ name: GitHub Classroom Workflow
 
 on:
   push:
-<<<<<<< HEAD
-    branches: [ main,dev ]
-=======
     branches: [ main,dev]
->>>>>>> template/main
     paths-ignore:
       - 'README.md'
   pull_request:
@@ -16,11 +12,7 @@ on:
 env:
   CARGO_TERM_COLOR: always
   TZ: Asia/Shanghai # 设置时区
-<<<<<<< HEAD
-  ENCODED_API_URL: "aHR0cHM6Ly9hcGkubGVhcm5pbmdjYW1wLmNuL3dlYi9hcGkvY291cnNlUmFuay9jcmVhdGVCeVRoaXJkVG9rZW4="
-=======
   ENCODED_API_URL: "aHR0cHM6Ly9hcGkub3BlbmNhbXAuY24vd2ViL2FwaS9jb3Vyc2VSYW5rL2NyZWF0ZUJ5VGhpcmRUb2tlbg=="
->>>>>>> template/main
   TROKEN: "OTdEamJRRFloc3NoNUFOeTNqaDV3N005WWVmV20wWWM="
 jobs:
   initialize:
@@ -358,11 +350,7 @@ jobs:
 
         new_json=$(jq -n \
           --arg channel "github" \
-<<<<<<< HEAD
-          --argjson courseId 1701 \
-=======
           --argjson courseId 1753 \
->>>>>>> template/main
           --arg ext "aaa" \
           --arg name "$pr1_user" \
           --argjson score "$total_succeeds" \
@@ -378,10 +366,7 @@ jobs:
         curl -X POST "$API_URL" \
           -H "accept: application/json;charset=utf-8" \
           -H "Content-Type: application/json" \
-<<<<<<< HEAD
-=======
           -H "token: $TOKEN"\
->>>>>>> template/main
           -d "$(cat $summary_file)" \
           -v
 
@@ -495,11 +480,7 @@ jobs:
         # 生成新的 JSON 内容
         new_json=$(jq -n \
           --arg channel "github" \
-<<<<<<< HEAD
-          --argjson courseId 1703 \
-=======
           --argjson courseId 1754 \
->>>>>>> template/main
           --arg ext "aaa" \
           --arg name "$pr2_user" \
           --argjson score "$total_succeeds" \
